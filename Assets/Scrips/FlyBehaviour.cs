@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using UnityEngine.Windows;
 
 public class FlyBehaviour : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class FlyBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if (Mouse.current.leftButton.wasPressedThisFrame )
         {
             _rigidbody2.velocity = Vector2.up * _velocity;
         }
