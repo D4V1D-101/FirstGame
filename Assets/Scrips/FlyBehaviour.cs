@@ -19,7 +19,7 @@ public class FlyBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame )
+        if (Mouse.current.leftButton.wasPressedThisFrame || Input.keypressdown.getkey(key.space()))
         {
             _rigidbody2.velocity = Vector2.up * _velocity;
         }
